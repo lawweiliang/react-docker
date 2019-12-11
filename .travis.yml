@@ -6,4 +6,6 @@ before-install:
   - docker build -t lianglaw/frontend -f Dockerfile.dev .
 
 script:
-  - docker run lianglaw/frontend npm test -- --coverage
+  - docker run -e CI=true lianglaw/frontend npm test -- --coverage
+#purpose of CI -The test command will force Test to run in CI-mode
+#                and tests will only run once instead of launching the watcher
