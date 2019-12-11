@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before-install:
+  - docker build -t lianglaw/frontend -f Dockerfile.dev .
+
+script:
+  - docker run lianglaw/frontend npm test -- --coverage
