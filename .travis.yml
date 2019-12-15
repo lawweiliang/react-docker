@@ -10,7 +10,7 @@ script:
 #purpose of CI -The test command will force Test to run in CI-mode
 #                and tests will only run once instead of launching the watcher
 
-docker:
+deploy:
   provider: elasticbeantalk
   region: 'us-east-2'
   app: 'react-docker'
