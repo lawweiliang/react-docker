@@ -7,8 +7,6 @@ before-install:
 
 script:
   - docker run -e CI=true lianglaw/frontend npm test -- --coverage
-#purpose of CI -The test command will force Test to run in CI-mode
-#                and tests will only run once instead of launching the watcher
 
 deploy:
   provider: elasticbeantalk
